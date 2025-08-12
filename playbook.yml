@@ -1,0 +1,11 @@
+---
+- name: Install Java and Docker locally
+  hosts: local
+  remote_user: vadim
+  become: yes
+  become_user: root
+  tasks:
+    - name: Install Java (default-jdk)
+      apt:
+        name: default-jdk
+        state: present
